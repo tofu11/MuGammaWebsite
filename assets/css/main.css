@@ -3029,3 +3029,168 @@ input, select, textarea {
 						}
 
 	}
+
+/* CSS to make the images larger */
+
+/* Image Styling */
+.profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.profile-image img:hover {
+    transform: scale(1.05); /* Slight zoom on hover for focus */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Profile Section Styling */
+.profile-section {
+    padding: 2em 10%; /* Increased padding for breathing space */
+}
+
+.profile-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.profile-highlight {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Row Layout */
+.profile-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between columns */
+}
+
+.profile-column {
+    flex: 1 1 280px; /* Set minimum width for images to prevent stretching */
+    max-width: 300px;
+}
+/* Container for all members *//* Brotherhood Image Styling */
+/* Brotherhood Section Styling */
+.brotherhood-section {
+    padding: 2em 0; /* Balanced padding */
+    display: flex;
+    justify-content: center;
+}
+
+/* Wrapper for precise centering */
+.brotherhood-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px; /* Increased max width for larger images */
+}
+
+/* Brotherhood Row with Centering */
+.brotherhood-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr)); /* Larger minimum size for images */
+    gap: 30px; /* Increased gap for more spacing between images */
+    max-width: 100%;
+    justify-items: center;
+}
+
+/* Brotherhood Column */
+.brotherhood-column {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+}
+
+/* Image Styling */
+.brotherhood-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brotherhood-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1280px) {
+    .brotherhood-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px; /* Adjusted gap for medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .brotherhood-row {
+        grid-template-columns: 1fr;
+        gap: 20px; /* Adjusted gap for smaller screens */
+    }
+}
+/* Introductory Text Styling */
+/* Introductory Text Styling */
+.intro-text {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333; /* Adjust for visibility */
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px; /* Space between the text and the first row of images */
+    max-width: 800px;
+    margin: 0 auto; /* Centers the text within the section */
+    padding: 10px 20px; /* Additional padding for readability */
+}
+
+/* Profile Section Styling */
+.profile-section {
+    padding: 2em 10%;
+}
+
+.profile-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile-column {
+    flex: 1 1 22%;
+    max-width: 22%;
+}
+
+.intro1{
+	font-size: 20px;
+	font-weight: bold;
+}.title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff; /* Darker shade for the title */
+
+}
+.chapter-nam {
+    font-size: 60px;
+    font-weight: bold;
+    color: #EDEAB5;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.eboard {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center; /* Centers the text horizontally */
+}
