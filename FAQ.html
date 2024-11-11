@@ -22,10 +22,21 @@
 							<ul>
 								<li class="current"><a href="index.html">Home</a></li>
 
-								<li><a href="left-sidebar.html">RUSH!!!</a></li>
-								<li><a href=>Brothers</a></li>
 								<li>
-									<a href="#">Social Media</a>
+									<a href="">RUSH!!!</a>
+									<ul class = "dropdown">
+										<li><a href="information.html">Information</a></li>
+										<li><a href="FAQ.html">FAQ</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="">Brothers</a>
+									<ul class="dropdown">
+										<li><a href="brothers.html">Brothers Profiles</a></li>
+										<li><a href="familytree.html">Family Tree</a></li>
+									</ul>
+								<li>
+									<a href="">Social Media</a>
 									<ul>
 										<li><a href="https://www.instagram.com/ubthetatau/">Instagram</a></li>
 										<li><a href="https://groupme.com/join_group/94366243/CDaNIh9n">GroupMe</a></li>
@@ -43,39 +54,106 @@
 						</nav>
 
 				</section>
+
+				<style>
+					/* Hover effect for FAQ question */
+					.faq-question:hover {
+						color: #590016; /* Change this to any color you like */
+						text-decoration: underline;
+					}
+			
+					/* CSS for expanding and collapsing the answer */
+					.faq-answer {
+						display: none;
+						margin-top: 1vh;
+						color: #333;
+					}
+			
+					/* Optional: Transition for a smooth toggle */
+					.faq-answer.show {
+						display: block;
+					}
+				</style>
 		<!-- Intro -->
 			<!-- Main -->
             <section id="faq" class="wrapper style1">
                 <div class="container">
                     <div style="width: 100%; background: #590016; display: flex; flex-direction: column; align-items: center; padding: 2vh 1vw; box-sizing: border-box;">
                         <div class="faq-container" style="width: 100%; display: flex; flex-direction: column; align-items: center; gap: 2vh; margin-top: 4vh;">
-                            <div class="faq-item" style="width: 100%; background-color: #f2f2f2; padding: 1vh 2vw; border-radius: 5px;">
-                                <h3 class="faq-question" style="cursor: pointer; margin: 0;color : #000">What is Theta Tau?</h3>
-				<div class="faq-answer" style="display: none; margin-top: 1vh; color: #333;">
-					Theta Tau is a co-ed professional engineering fraternity that promotes the social and professional development of its members
-				</div>
-			    </div>
+							<!-- In your HTML -->
+							<div class="faq-item">
+    							<input type="checkbox" id="faq1" class="faq-toggle" />
+    							<label class="faq-question" for="faq1">What is Theta Tau?</label>
+    							<div class="faq-answer">
+        							Comprised of a large diverse group of engineers with similar goals committede to helping each other grow as engineers and people, Theta Tau is a co-ed professional engineering fraternity that promotes the social and professional development of its members.
+    							</div>
+							</div>
 
-                            <div class="faq-item" style="width: 100%; background-color: #f2f2f2; padding: 1vh 2vw; border-radius: 5px;">
-                                <h3 class="faq-question" style="cursor: pointer; margin: 0;color: #000">How can I join?</h3>
-                                <div class="faq-answer" style="display: none; margin-top: 1vh; color: #333;">
-                                    You can join Theta Tau by participating in our RUSH events at the beginning of each semester and following our recruitment process.
+
+							<div class="faq-item" >
+    							<input type="checkbox" id="faq3" class="faq-toggle" />
+    							<label class="faq-question" for="faq3">How can I join?</label>
+    							<div class="faq-answer">
+									You can join Theta Tau by participating in our RUSH events at the beginning of each semester and following our recruitment process. 
+								</div>
+							</div>
+
+							<div class="faq-item" >
+    							<input type="checkbox" id="faq4" class="faq-toggle" />
+    							<label class="faq-question" for="faq4">What is rush?</label>
+    							<div class="faq-answer">
+									Rush occurs in the beginning weeks of each semester, consisting of multiple events, allowing you to meet the brothers and see how our fraternity stands for. It is an opporunity for you to meet brothers, and for us to find other motivated engineers. At the end of rush, bids and interviews will be offered to a limited amount of people, those of which may accept or decline the bid and begin pledging. Rush is completely free of charge and non-binding.
                                 </div>
                             </div>
-                            <div class="faq-item" style="width: 100%; background-color: #f2f2f2; padding: 1vh 2vw; border-radius: 5px;">
-                                <h3 class="faq-question" style="cursor: pointer; margin: 0;color: #000">What majors are accepted?</h3>
-                                <div class="faq-answer" style="display: none; margin-top: 1vh; color: #333;">
-                                    Theta Tau is open to all engineering majors, including Computer Science, Civil Engineering, and Aerospace.
+
+							<div class="faq-item" >
+    							<input type="checkbox" id="faq2" class="faq-toggle" />
+    							<label class="faq-question" for="faq2">Who can rush?</label>
+    							<div class="faq-answer">
+                                    Theta Tau is open to all full-time students majoring in engineering, including Computer Science, Civil Engineering, and Aerospace.
                                 </div>
                             </div>
-                    
-                                      <!-- Add more member divs as needed, they will automatically wrap to the next line -->
+
+
+							<div class="faq-item" >
+    							<input type="checkbox" id="faq5" class="faq-toggle" />
+    							<label class="faq-question" for="faq5"><!--Question--></label>
+    							<div class="faq-answer">
+									<!--Answer-->
                                 </div>
                             </div>
-            
-                                      <!-- Add more member divs as needed, they will automatically wrap to the next line -->
-                               </div>
-                        </div>
+
+							<div class="faq-item" >
+    							<input type="checkbox" id="faq6" class="faq-toggle" />
+    							<label class="faq-question" for="faq6"><!--Question--></label>
+    							<div class="faq-answer">
+									<!--Answer-->
+                                </div>
+                            </div>
+
+							<div class="faq-item" >
+    							<input type="checkbox" id="faq7" class="faq-toggle" />
+    							<label class="faq-question" for="faq7"><!--Question--></label>
+    							<div class="faq-answer">
+									<!--Answer-->
+                                </div>
+                            </div>
+
+							<div class="faq-item" >
+    							<input type="checkbox" id="faq8" class="faq-toggle" />
+    							<label class="faq-question" for="faq8"><!--Question--></label>
+    							<div class="faq-answer">
+									<!--Answer-->
+                                </div>
+                            </div>
+							
+							<div class="faq-item" >
+    							<input type="checkbox" id="faq9" class="faq-toggle" />
+    							<label class="faq-question" for="faq9">Wait! I still have questions!</label>
+    							<div class="faq-answer">
+									no you dont
+                                </div>
+                            </div>
             
                             
                         </div>
