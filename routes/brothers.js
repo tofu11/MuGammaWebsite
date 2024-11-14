@@ -1,7 +1,7 @@
 // routes/brothers.js
 const express = require('express');
 const router = express.Router();
-const db = require('../db'); // Assuming your DB connection is in db.js
+const db = require('../assets/js/db'); // Assuming your DB connection is in db.js
 
 router.get('/', (req, res) => {
   db.query('SELECT * FROM brothers', (err, results) => {
