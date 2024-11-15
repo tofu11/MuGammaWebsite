@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <style>
+        /* Existing and new CSS for Family Tree */
         .tree {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 50px;
-            margin-bottom: 100px; /* Add space below the family tree */
+            margin-bottom: 100px;
         }
 
         .node {
@@ -20,11 +21,13 @@
             justify-content: center;
             align-items: center;
             width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            color: #fff;
+            height: 60px;
+            background-color: #800000; /* Maroon for nodes */
+            color: #ffd700; /* Gold text */
             font-weight: bold;
             text-align: center;
+            border-radius: 8px;
+            margin-bottom: 10px;
         }
 
         .chapter {
@@ -33,36 +36,35 @@
             margin-bottom: 20px;
         }
 
+        .branch, .sub-branch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
         .brothers {
             display: flex;
             gap: 20px;
         }
 
-        .brother {
-            background-color: #800000;
-            color: #ffd700;
-        }
-
         .line {
             width: 2px;
-            height: 40px;
+            height: 20px;
             background-color: black;
             position: relative;
-            top: -20px;
+            margin-bottom: 10px;
         }
 
         .connector {
-    width: 80px;
-    height: 2px;
-    background-color: black;
-    position: relative;
-    top: 50px; /* Move connector down to align with middle of nodes */
-}
+            width: 60px;
+            height: 2px;
+            background-color: black;
+        }
 
-
-        /* Add top margin to footer to push it further down */
+        /* Footer margin */
         #footer {
-            margin-top: 200px;
+            margin-top: 100px;
         }
     </style>
 </head>
@@ -126,22 +128,93 @@
 
         <!-- Family Tree -->
         <section id="family-tree" class="tree">
-            <!-- Chapter Node -->
+            <!-- Root Node (Mu Gamma Chapter) -->
             <div class="node chapter">Mu Gamma Chapter</div>
             <div class="line"></div>
-            <!-- Brother Nodes -->
-            <div class="brothers">
-                <div class="node brother">Brother #1</div>
-                <div class="connector"></div>
-                <div class="node brother">Brother #2</div>
-                <div class="connector"></div>
-                <div class="node brother">Brother #3</div>
-                <div class="connector"></div>
-                <div class="node brother">Brother #4</div>
-                <div class="connector"></div>
-                <div class="node brother">Brother #5</div>
-                <div class="connector"></div>
-                <div class="node brother">Brother #6</div>
+
+            <!-- Level 1 Branch -->
+            <div class="branch">
+                <div class="node">Founding Member</div>
+                <div class="line"></div>
+
+                <!-- Level 2 Branches -->
+                <div class="brothers">
+                    <div class="branch">
+                        <div class="node">Family Head A</div>
+                        <div class="line"></div>
+
+                        <!-- Level 3 Branches for Family Head A -->
+                        <div class="sub-branch">
+                            <div class="brothers">
+                                <div class="node">Brother A1</div>
+                                <div class="connector"></div>
+                                <div class="node">Brother A2</div>
+                                <div class="connector"></div>
+                                <div class="node">Brother A3</div>
+                            </div>
+                            <div class="line"></div>
+
+                            <!-- Further branching as necessary -->
+                            <div class="sub-branch">
+                                <div class="brothers">
+                                    <div class="node">Brother A1.1</div>
+                                    <div class="connector"></div>
+                                    <div class="node">Brother A1.2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="branch">
+                        <div class="node">Family Head B</div>
+                        <div class="line"></div>
+
+                        <!-- Level 3 Branches for Family Head B -->
+                        <div class="sub-branch">
+                            <div class="brothers">
+                                <div class="node">Brother B1</div>
+                                <div class="connector"></div>
+                                <div class="node">Brother B2</div>
+                            </div>
+                            <div class="line"></div>
+
+                            <!-- Further branching for Brother B1 if necessary -->
+                            <div class="sub-branch">
+                                <div class="brothers">
+                                    <div class="node">Brother B1.1</div>
+                                    <div class="connector"></div>
+                                    <div class="node">Brother B1.2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="branch">
+                        <div class="node">Family Head C</div>
+                        <div class="line"></div>
+
+                        <!-- Level 3 Branches for Family Head C -->
+                        <div class="sub-branch">
+                            <div class="brothers">
+                                <div class="node">Brother C1</div>
+                                <div class="connector"></div>
+                                <div class="node">Brother C2</div>
+                                <div class="connector"></div>
+                                <div class="node">Brother C3</div>
+                            </div>
+                            <div class="line"></div>
+
+                            <!-- Further branching for Brother C1 if necessary -->
+                            <div class="sub-branch">
+                                <div class="brothers">
+                                    <div class="node">Brother C1.1</div>
+                                    <div class="connector"></div>
+                                    <div class="node">Brother C1.2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
