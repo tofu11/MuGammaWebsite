@@ -3206,8 +3206,8 @@ input, select, textarea {
 }
 
 .faq-container {
-	margin: auto;
-    width: 50%; /* Changed to 100% to fit the parent container */
+	margin: 0 auto;
+    width: 90%; /* Changed to 100% to fit the parent container */
     max-width: 800px; /* Set a max-width for a better visual layout */
     display: flex;
     flex-direction: column ;
@@ -3226,7 +3226,7 @@ input, select, textarea {
 	cursor: pointer;
 	align-items: center;
 	/*text-align: center; /*center the questions*/
-	height: 100vh;
+	height: auto;
     width: 90%; /* Set to a smaller width for better design */
     background-color: #f9f9f9;
     padding: 20px 30px;
@@ -3238,6 +3238,8 @@ input, select, textarea {
 
 .faq-toggle:checked + label + .faq-answer {
     display: block;
+	max-height: 500px;
+	opacity: 1;
 }
 
 .faq-question {
@@ -3249,7 +3251,7 @@ input, select, textarea {
 		margin: auto;
 		color: #333;
 		transition: color 0.3s ease;
-		padding: 8px 0;
+		padding: 10px;
 		text-align: center;
 	}
 
@@ -3267,6 +3269,10 @@ input, select, textarea {
 /* CSS for expanding and collapsing the answer */
 .faq-answer {
 	display: none;
+	transition: max-height 0.4s ease, opacity 0.4s ease;
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
 	font-size: 20px;
 	margin-top: 1vh;
 	color: #333;
@@ -3280,14 +3286,31 @@ input, select, textarea {
 
 /* Style for the red box */
 .red-box {
-    width: 180%; /* Slightly smaller than the white box */
+    width: 100%; /* Slightly smaller than the white box */
+	max-width: 800px;
+	margin: auto;
 	background: #590016; /* Red background */
-	height: 1000px; /* the height of the red box */
+	height: auto; /* the height of the red box */
     padding: 2vh 2vw;
     box-sizing: border-box;
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+    .faq-container {
+        width: 95%; /* Use more screen space */
+        padding: 10px; /* Reduce padding */
+    }
+    
+    .faq-item {
+        width: 100%;
+    }
+
+    .red-box {
+        width: 100%;
+    }
 }
 
 
