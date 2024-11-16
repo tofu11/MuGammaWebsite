@@ -956,7 +956,7 @@ input, select, textarea {
 				align-items: stretch;
 			}
 
-				.row > * {
+				.row > * {	
 					box-sizing: border-box;
 				}
 
@@ -3200,24 +3200,34 @@ input, select, textarea {
 .faq-answer {
     display: none;
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 18px;
     color: #555;
     line-height: 1.5;
 }
 
 .faq-container {
-    width: 100%;
+	margin: auto;
+    width: 50%; /* Changed to 100% to fit the parent container */
+    max-width: 800px; /* Set a max-width for a better visual layout */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2vh;
-    margin-top: 4vh;
+    flex-direction: column ;
+    align-items: center ;
+    gap: 2vh ;
+    margin-top: 2vh auto;
+    color: #ffffff; /* White text for better contrast */
+    padding: 20px; /* Optional: padding for spacing inside the container */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    border-radius: 10px; /* Optional: rounded corners */
 }
+
 
 /* FAQ item background */
 .faq-item {
 	cursor: pointer;
-    width: 80%; /* Set to a smaller width for better design */
+	align-items: center;
+	/*text-align: center; /*center the questions*/
+	height: 100vh;
+    width: 90%; /* Set to a smaller width for better design */
     background-color: #f9f9f9;
     padding: 20px 30px;
     border-radius: 8px;
@@ -3231,15 +3241,53 @@ input, select, textarea {
 }
 
 .faq-question {
-		font-size: 18px;
+		font-size: 22px;
+		text-align: center;
+		display: flex;
 		font-weight: bold;
 		cursor: pointer;
-		margin: 0;
+		margin: auto;
 		color: #333;
 		transition: color 0.3s ease;
+		padding: 8px 0;
+		text-align: center;
 	}
 
 
 .faq-toggle {
     display: none;
 }
+
+/* Hover effect for FAQ question */
+.faq-question:hover {
+	color: #590016; /* Change this to any color you like */
+	text-decoration: underline;
+}
+
+/* CSS for expanding and collapsing the answer */
+.faq-answer {
+	display: none;
+	font-size: 20px;
+	margin-top: 1vh;
+	color: #333;
+}
+
+/* Optional: Transition for a smooth toggle */
+.faq-answer.show {
+	display: block;
+}
+
+
+/* Style for the red box */
+.red-box {
+    width: 180%; /* Slightly smaller than the white box */
+	background: #590016; /* Red background */
+	height: 1000px; /* the height of the red box */
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+
