@@ -1,15 +1,56 @@
-version: '3'
 services:
+  frontend:
+    build:
+      context: . #Path to project directory
+      dockerfile: Dockerfile.frontend #Points to frontend docker file
+    ports:
+    - "8080:80" #Local host port 8080 is mapped to frontend container 
+    volumes:
+    # Map assets folder containing index.html, CSS, and JS
+    - ./assets:/usr/share/nginx/html/assets
+    # Map images folder
+    - ./images:/usr/share/nginx/html/images
+    # Mount custom nginx.conf
+    - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+    - app-network
+
+  backend:
+    build:
+      context: . #Path to project directory
+      dockerfile: backend/Dockerfile.backend #Points to backend Docker file
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=brother_admin
+      - MYSQL_PASSWORD=EpsilonGamma24
+      - MYSQL_DB=brothers_db
+    ports:
+      - "3000:3000" #Exposing backend to port 3000 to communicate with frontend
+    volumes:
+      - ./backend:/MuGammaWebsite-dev/backend
+    networks: 
+      - app-network
+    depends_on:
+      - mysql #Ensure mysql is started before backend
+
   mysql:
     image: mysql:latest
     restart: always
     ports:
-      - '3306:3306'
+      - '3307:3306' #Expose MySQL to port 3307 on the host because 3306 on the host is already being used by local instance of MYSQL running (on host machine outside of docker)
     environment:
       MYSQL_ROOT_PASSWORD: "EpsilonGamma24"
-  website:
-    build: .
-    environment:
-      WAIT_HOSTS: mysql:3306
-    ports:
-      - '8080:8080'
+      MYSQL_DATABASE: brothers_db
+      MYSQL_USER: brother_admin
+      MYSQL_PASSWORD: EpsilonGamma24
+    volumes:
+      - mysql-data:/var/lib/mysql 
+    networks: 
+    - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mysql-data:

@@ -956,7 +956,7 @@ input, select, textarea {
 				align-items: stretch;
 			}
 
-				.row > * {	
+				.row > * {
 					box-sizing: border-box;
 				}
 
@@ -3206,28 +3206,18 @@ input, select, textarea {
 }
 
 .faq-container {
-	margin: 0 auto;
-    width: 90%; /* Changed to 100% to fit the parent container */
-    max-width: 800px; /* Set a max-width for a better visual layout */
+    width: 100%;
     display: flex;
-    flex-direction: column ;
-    align-items: center ;
-    gap: 2vh ;
-    margin-top: 2vh auto;
-    color: #ffffff; /* White text for better contrast */
-    padding: 20px; /* Optional: padding for spacing inside the container */
-    box-sizing: border-box; /* Include padding in the width calculation */
-    border-radius: 10px; /* Optional: rounded corners */
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    margin-top: 4vh;
 }
-
 
 /* FAQ item background */
 .faq-item {
 	cursor: pointer;
-	align-items: center;
-	/*text-align: center; /*center the questions*/
-	height: auto;
-    width: 90%; /* Set to a smaller width for better design */
+    width: 80%; /* Set to a smaller width for better design */
     background-color: #f9f9f9;
     padding: 20px 30px;
     border-radius: 8px;
@@ -3238,77 +3228,18 @@ input, select, textarea {
 
 .faq-toggle:checked + label + .faq-answer {
     display: block;
-	max-height: 500px;
-	opacity: 1;
 }
 
 .faq-question {
-    font-size: 20px; /* Larger text for the question */
-    font-weight: bold; /* Make the question bold */
-    color: #333; /* Darker color for better contrast */
-    cursor: pointer; /* Change cursor on hover */
-    margin-bottom: 10px; /* Space below the question */
+		font-size: 18px;
+		font-weight: bold;
+		cursor: pointer;
+		margin: 0;
+		color: #333;
+		transition: color 0.3s ease;
 	}
 
 
 .faq-toggle {
     display: none;
 }
-
-/* Hover effect for FAQ question */
-.faq-question:hover {
-	color: #590016; /* Change this to any color you like */
-	text-decoration: underline;
-}
-
-/* CSS for expanding and collapsing the answer */
-.faq-answer {
-	display: none;
-	transition: max-height 0.4s ease, opacity 0.4s ease;
-	max-height: 0;
-	overflow: hidden;
-	opacity: 0;
-	font-size: 15px;
-	margin-top: 1vh;
-	color: #333;
-}
-
-/* Optional: Transition for a smooth toggle */
-.faq-answer.show {
-	display: block;
-}
-
-
-/* Style for the red box */
-.red-box {
-    width: 100%; /* Slightly smaller than the white box */
-	max-width: 800px;
-	margin: auto;
-	background: linear-gradient(to bottom, #E89BA6, #590016); /* fade from light red to dark red */
-	margin-top: -20px;
-	height: auto; /* the height of the red box */
-    padding: 2vh 2vw;
-    box-sizing: border-box;
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	border-radius: 10px;
-	
-}
-
-@media only screen and (max-width: 768px) {
-    .faq-container {
-        width: 80%; /* Use more screen space */
-        padding: 10px; /* Reduce padding */
-    }
-    
-    .faq-item {
-        width: 100%;
-    }
-
-    .red-box {
-        width: 100%;
-    }
-}
-
-

@@ -1,7 +1,7 @@
 const express = require('express');
 const brothersRoute = require('../../routes/brothers');
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
 
 require('./db');
 console.log('App is starting...'); 
