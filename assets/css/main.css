@@ -3285,6 +3285,7 @@ input, select, textarea {
 	max-width: 800px;
 	margin: auto;
 	background: linear-gradient(to bottom, #E89BA6, #590016); /* fade from light red to dark red */
+	margin-top: -70px;
 	height: auto; /* the height of the red box */
     padding: 2vh 2vw;
     box-sizing: border-box;
