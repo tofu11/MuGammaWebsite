@@ -3243,3 +3243,19 @@ input, select, textarea {
 .faq-toggle {
     display: none;
 }
+
+/* Style for the red box */
+.red-box {
+    width: 100%; /* Slightly smaller than the white box */
+	max-width: 800px;
+	margin: auto;
+	background: linear-gradient(to bottom, #E89BA6, #590016); /* fade from light red to dark red */
+	margin-top: -70px;
+	height: auto; /* the height of the red box */
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+}
