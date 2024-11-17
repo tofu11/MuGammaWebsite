@@ -3268,7 +3268,7 @@ input, select, textarea {
 	max-height: 0;
 	overflow: hidden;
 	opacity: 0;
-	font-size: 20px;
+	font-size: 15px;
 	margin-top: 1vh;
 	color: #333;
 }
@@ -3285,7 +3285,7 @@ input, select, textarea {
 	max-width: 800px;
 	margin: auto;
 	background: linear-gradient(to bottom, #E89BA6, #590016); /* fade from light red to dark red */
-	margin-top: -70px;
+	margin-top: -20px;
 	height: auto; /* the height of the red box */
     padding: 2vh 2vw;
     box-sizing: border-box;
