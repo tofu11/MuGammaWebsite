@@ -28,7 +28,7 @@ services:
       - "3000:3000" #Exposing backend to port 3000 to communicate with frontend
     volumes:
       - ./backend:/MuGammaWebsite-dev/backend
-    networks: 
+    networks:
       - app-network
     depends_on:
       - mysql #Ensure mysql is started before backend
@@ -37,15 +37,15 @@ services:
     image: mysql:latest
     restart: always
     ports:
-      - '3307:3306' #Expose MySQL to port 3307 on the host because 3306 on the host is already being used by local instance of MYSQL running (on host machine outside of docker)
+      - '3308:3306' #Expose MySQL to port 3307 on the host because 3306 on the host is already being used by local instance of MYSQL running (on host machine outside of docker)
     environment:
       MYSQL_ROOT_PASSWORD: "EpsilonGamma24"
       MYSQL_DATABASE: brothers_db
       MYSQL_USER: brother_admin
       MYSQL_PASSWORD: EpsilonGamma24
     volumes:
-      - mysql-data:/var/lib/mysql 
-    networks: 
+      - mysql-data:/var/lib/mysql
+    networks:
     - app-network
 
 networks:
