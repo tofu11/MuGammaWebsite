@@ -3214,6 +3214,7 @@ input, select, textarea {
 	font-size: 18px;
 	margin-top: 1vh;
 	color: #333;
+	margin: auto;
 }
 
 .faq-container {
@@ -3253,7 +3254,6 @@ input, select, textarea {
 	color: #333;
 	transition: color 0.3s ease;
 	padding: 10px;
-	text-align: center;
 }
 
 .faq-question:hover {
