@@ -3264,3 +3264,19 @@ input, select, textarea {
 	flex-direction: column;
 	border-radius: 10px;
 }
+
+
+.instagram-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.instagram-embed {
+    width: 100%;
+    max-width: 500px; /* Adjust for Instagram's typical width */
+    height: 450px; /* Height set to show full video */
+    border: none;
+}
