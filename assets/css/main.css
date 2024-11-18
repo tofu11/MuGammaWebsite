@@ -3284,6 +3284,7 @@ input, select, textarea {
 	border-radius: 10px;
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 768px) {
     .faq-container {
         width: 95%; /* Use more screen space */
@@ -3298,3 +3299,20 @@ input, select, textarea {
         width: 100%;
     }
 }
+=======
+
+.instagram-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.instagram-embed {
+    width: 100%;
+    max-width: 500px; /* Adjust for Instagram's typical width */
+    height: 450px; /* Height set to show full video */
+    border: none;
+}
+>>>>>>> 5fd7fd1e9a3010d28950766cab9d05c713cd1419
