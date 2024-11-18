@@ -3206,11 +3206,14 @@ input, select, textarea {
 
 /* faq.css */
 .faq-answer {
-    display: none;
-    margin-top: 10px;
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
+	display: none;
+	transition: max-height 0.4s ease, opacity 0.4s ease;
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	font-size: 18px;
+	margin-top: 1vh;
+	color: #333;
 }
 
 .faq-container {
@@ -3224,7 +3227,8 @@ input, select, textarea {
 /* FAQ item background */
 .faq-item {
 	cursor: pointer;
-    width: 60%; /* Set to a smaller width for better design */
+    width: 50%; /* Set to a smaller width for better design */
+	height: auto;
     background-color: #f9f9f9;
     padding: 20px 30px;
     border-radius: 8px;
@@ -3235,19 +3239,34 @@ input, select, textarea {
 
 .faq-toggle:checked + label + .faq-answer {
     display: block;
+	max-height: 500px;
+	opacity: 1;
 }
 
 .faq-question {
-		font-size: 18px;
-		font-weight: bold;
-		cursor: pointer;
- 		color: #333;
-		transition: color 0.3s ease;
-	}
+	font-size: 20px;
+	text-align: center;
+	display: flex;
+	font-weight: bold;
+	cursor: pointer;
+	margin: auto;
+	color: #333;
+	transition: color 0.3s ease;
+	padding: 10px;
+	text-align: center;
+}
 
+.faq-question:hover {
+		color: #590016; /* Change this to any color you like */
+		text-decoration: underline;
+	}
 
 .faq-toggle {
     display: none;
+}
+
+.faq-answer.show {
+	display: block;
 }
 
 /* Style for the red box */
@@ -3263,4 +3282,19 @@ input, select, textarea {
 	display: flex;
 	flex-direction: column;
 	border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .faq-container {
+        width: 95%; /* Use more screen space */
+        padding: 10px; /* Reduce padding */
+    }
+    
+    .faq-item {
+        width: 100%;
+    }
+
+    .red-box {
+        width: 100%;
+    }
 }
