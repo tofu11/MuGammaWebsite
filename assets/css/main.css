@@ -2084,9 +2084,8 @@ input, select, textarea {
 			}
 			
 		.wrapper.faqstyle {
-			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), 
-			url("/images/banner.jpg") center center;
-						}
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+								}
 
 
 /* Page Wrapper */
