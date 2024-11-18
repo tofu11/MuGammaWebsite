@@ -1,7 +1,7 @@
 const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
-  host: process.env.MYSQL_HOST,
+  host: '10.84.159.240', //IP address for the host here should be the private IPV4 address under ipconfig for the wirelesss lan adapter
   user: 'brother_admin',
   password: 'EpsilonGamma24',
   database: 'brothers_db'
